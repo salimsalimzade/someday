@@ -1,0 +1,21 @@
+{
+  "name": "@bedrock/ui",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@solidjs/web": "2.0.0-rc.20",
+    "solid-js": "2.0.0-rc.20",
+    "yosegi-solid": "0.5.1"
+  },
+  "peerDependencies": {
+    "@solidjs/web": "2.0.0-rc.20",
+    "solid-js": "2.0.0-rc.20",
+    "yosegi-solid": "0.5.1"
+  }
+}

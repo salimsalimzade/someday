@@ -1,0 +1,52 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--yosegi-space-600);
+}
+
+.page-title {
+  font: var(--yosegi-text-title);
+}
+
+.page-description {
+  font: var(--yosegi-text-body);
+  color: var(--yosegi-color-fg-muted);
+}
+
+/* The field's label, box and error message become this grid's three rows (subgrid), so the
+   button sits in the box's row and doesn't move when an error message appears below. */
+.page-form {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: start;
+  column-gap: var(--yosegi-space-300);
+}
+
+.page-form-field {
+  grid-row: span 3;
+  display: grid;
+  grid-template-rows: subgrid;
+}
+
+/* Centered: the subgrid folds the field's row gap into the box's row, so the row is taller than the box. */
+.page-form-action {
+  grid-column: 2;
+  grid-row: 2;
+  align-self: center;
+}
+
+.stat-list {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: var(--yosegi-space-200) var(--yosegi-space-600);
+  font: var(--yosegi-text-body);
+}
+
+.stat-label {
+  color: var(--yosegi-color-fg-muted);
+}
+
+.greeting-message {
+  font: var(--yosegi-text-heading);
+}

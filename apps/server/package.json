@@ -1,0 +1,31 @@
+{
+  "name": "@bedrock/server",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./src/app.ts"
+    }
+  },
+  "scripts": {
+    "dev": "tsx watch --env-file-if-exists=.env src/index.ts",
+    "build": "tsdown",
+    "start": "node dist/index.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@bedrock/schemas": "workspace:*",
+    "@bedrock/types": "workspace:*",
+    "@bedrock/utils": "workspace:*",
+    "@hono/node-server": "2.1.5",
+    "@hono/valibot-validator": "0.6.2",
+    "hono": "4.13.16",
+    "valibot": "1.5.0"
+  },
+  "devDependencies": {
+    "tsdown": "0.23.4",
+    "tsx": "4.23.15",
+    "vitest": "5.0.5"
+  }
+}

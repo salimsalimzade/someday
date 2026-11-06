@@ -1,0 +1,7 @@
+packages:
+  - apps/*
+  - shared/*
+
+allowBuilds:
+  esbuild: true
+  lefthook: false

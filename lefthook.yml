@@ -1,0 +1,25 @@
+# https://lefthook.dev/configuration/
+pre-commit:
+  parallel: true
+  jobs:
+    - name: file-names
+      run: node scripts/check-file-names.ts {staged_files}
+
+    - name: biome
+      glob: "*.{js,jsx,ts,tsx,mjs,cjs,json,jsonc,css,md}"
+      run: pnpm exec biome check --write --error-on-warnings --no-errors-on-unmatched --files-ignore-unknown=true {staged_files}
+      stage_fixed: true
+
+commit-msg:
+  jobs:
+    - name: commitlint
+      run: pnpm exec commitlint --edit {1}
+
+pre-push:
+  parallel: true
+  jobs:
+    - name: biome
+      run: pnpm exec biome ci --error-on-warnings .
+
+    - name: typecheck
+      run: pnpm typecheck

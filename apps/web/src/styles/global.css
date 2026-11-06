@@ -1,0 +1,6 @@
+/* App-wide styles. Prefer yosegi tokens (--yosegi-*) over raw values. */
+body {
+  min-height: 100vh;
+  background: var(--yosegi-color-bg);
+  color: var(--yosegi-color-fg);
+}

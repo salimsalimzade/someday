@@ -1,0 +1,43 @@
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--yosegi-space-400) var(--yosegi-space-800);
+  border-bottom: 1px solid var(--yosegi-color-border);
+}
+
+.app-brand {
+  font: var(--yosegi-text-heading);
+  color: var(--yosegi-color-fg);
+  text-decoration: none;
+}
+
+.app-nav {
+  display: flex;
+  gap: var(--yosegi-space-400);
+}
+
+.app-nav a {
+  font: var(--yosegi-text-body);
+  color: var(--yosegi-color-fg-muted);
+  text-decoration: none;
+}
+
+.app-nav a[aria-current="page"] {
+  color: var(--yosegi-color-fg-accent);
+  font-weight: var(--yosegi-font-weight-semibold);
+}
+
+.app-main {
+  flex: 1;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: var(--yosegi-space-800);
+}
